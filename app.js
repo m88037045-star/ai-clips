@@ -1,7 +1,7 @@
-const SUPABASE_URL = "https://pkhazfluijkfyuxgffgv.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable__dR6SaYW0YXo_NeF0X3dOw_dROVRLHo";
+const SUPABASE_URL = "YOUR_SUPABASE_URL";
+const SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
 
-// Load Supabase library
+// Load Supabase
 const script = document.createElement("script");
 script.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
 
@@ -16,10 +16,15 @@ script.onload = () => {
 
 document.head.appendChild(script);
 
+
+// Create project
 function createProject() {
   const input = document.getElementById("videoUrl");
 
-  if (!input) return;
+  if (!input) {
+    alert("Video URL input not found.");
+    return;
+  }
 
   const url = input.value.trim();
 
@@ -28,7 +33,9 @@ function createProject() {
     return;
   }
 
+  // Save URL
   localStorage.setItem("clip_source_url", url);
 
-  window.location.href = "project.html";
+  // Open project page
+  window.location.href = "Project.html";
 }
