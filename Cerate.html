@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Create Clips - ClipAI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    CLIP<span>AI</span>
+  </a>
+
+  <a href="dashboard.html">
+    Dashboard
+  </a>
+
+</header>
+
+<main>
+
+<section class="hero" style="padding-top:70px;">
+
+  <div class="badge">
+    CREATE PROJECT
+  </div>
+
+  <h1 style="font-size:55px;">
+    Create your <span>Shorts</span>
+  </h1>
+
+  <p>
+    Add your video source and choose your clip settings.
+  </p>
+
+  <div
+    style="
+      max-width:650px;
+      margin:40px auto;
+      background:#101010;
+      border:1px solid #222;
+      padding:30px;
+      border-radius:16px;
+      text-align:left;
+    "
+  >
+
+    <label>
+      Video URL
+    </label>
+
+    <input
+      id="videoUrl"
+      type="url"
+      placeholder="Paste your video URL"
+      style="
+        width:100%;
+        padding:16px;
+        margin:10px 0 25px;
+        background:#080808;
+        color:white;
+        border:1px solid #333;
+        border-radius:8px;
+      "
+    >
+
+    <label>
+      Number of clips
+    </label>
+
+    <select
+      style="
+        width:100%;
+        padding:15px;
+        margin:10px 0 20px;
+        background:#080808;
+        color:white;
+        border:1px solid #333;
+        border-radius:8px;
+      "
+    >
+
+      <option>3 Clips</option>
+      <option>5 Clips</option>
+      <option>10 Clips</option>
+
+    </select>
+
+    <label>
+      Aspect Ratio
+    </label>
+
+    <select
+      style="
+        width:100%;
+        padding:15px;
+        margin:10px 0 25px;
+        background:#080808;
+        color:white;
+        border:1px solid #333;
+        border-radius:8px;
+      "
+    >
+
+      <option>9:16 - Shorts</option>
+      <option>1:1 - Square</option>
+      <option>16:9 - Landscape</option>
+
+    </select>
+
+    <button
+      onclick="createProject()"
+      class="primary-btn"
+      style="
+        width:100%;
+        border:0;
+        cursor:pointer;
+        font-size:16px;
+      "
+    >
+      Generate Clips →
+    </button>
+
+  </div>
+
+</section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
