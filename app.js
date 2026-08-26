@@ -1,5 +1,5 @@
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+const SUPABASE_URL = "NEXT_PUBLIC_SUPABASE_URL=https://pkhazfluijkfyuxgffgv.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable__dR6SaYW0YXo_NeF0X3dOw_dROVRLHo";
 
 // Load Supabase
 const script = document.createElement("script");
