@@ -1,4 +1,20 @@
-console.log("ClipAI frontend loaded.");
+const SUPABASE_URL = "https://pkhazfluijkfyuxgffgv.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable__dR6SaYW0YXo_NeF0X3dOw_dROVRLHo";
+
+// Load Supabase library
+const script = document.createElement("script");
+script.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+
+script.onload = () => {
+  window.supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  console.log("Supabase connected!");
+};
+
+document.head.appendChild(script);
 
 function createProject() {
   const input = document.getElementById("videoUrl");
